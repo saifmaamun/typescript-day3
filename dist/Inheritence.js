@@ -1,4 +1,7 @@
 "use strict";
+// const clg=(param:any):void=>{
+//     console.log(param);
+// }
 class Common {
     constructor(name, age) {
         this.name = name;

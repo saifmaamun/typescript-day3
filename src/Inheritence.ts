@@ -1,3 +1,6 @@
+// const clg=(param:any):void=>{
+//     console.log(param);
+// }
 class Common{
     constructor(public name:string, public age:number){
 
