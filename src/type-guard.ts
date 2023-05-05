@@ -51,3 +51,71 @@ const admin1:AdminUser={
 
 console.log(checkAdmin(user1))
 console.log(checkAdmin(admin1))
+
+
+
+// instaceof guard
+
+
+class Crush{
+    constructor(public name:string, public age:number){
+
+    }
+    publish(){
+        console.log(`im the crush`)
+    }
+}
+
+class GF extends Crush{
+    constructor(public name:string, public age:number, public role:string){
+        super(name, age)
+    }
+    announceGF(){
+        console.log(`im the ${this.role}`)
+    }
+}
+class Wife extends Crush{
+    constructor(public name:string, public age:number, public role:string){
+        super(name, age)
+    }
+    announceWife(){
+        console.log(`im the ${this.role}`)
+    }
+}
+class LiveTogather extends Crush{
+    constructor(public name:string, public age:number, public role:string){
+        super(name, age)
+    }
+    announcePartner(){
+        console.log(`im the ${this.role}`)
+    }
+}
+
+
+function isGF(partner:Crush): partner is GF{
+    return partner instanceof GF;
+}
+function isWife(partner:Crush): partner is Wife{
+    return partner instanceof Wife;
+}
+
+
+function getPartner(partner:Crush){
+    if (isGF(partner)){
+        partner.announceGF();
+    }
+    else if (isWife(partner)){
+        partner.announceWife()
+    }
+    else{
+        partner.publish()
+    }
+}
+
+const gf1 =new GF('Edita',14,'GF');
+const wife1 = new Wife('Edu',18,'Wife');
+const lt1 = new LiveTogather('Akku',21,'Live Togather');
+
+getPartner(gf1)
+getPartner(wife1)
+getPartner(lt1)
