@@ -1,6 +1,6 @@
-const clg=(param:any):void=>{
-    console.log(param);
-}
+// const clg=(param:any):void=>{
+//     console.log(param);
+// }
 
 
 // keyof guard

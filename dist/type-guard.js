@@ -1,7 +1,7 @@
 "use strict";
-const clg = (param) => {
-    console.log(param);
-};
+// const clg=(param:any):void=>{
+//     console.log(param);
+// }
 function addNumber(n1, n2) {
     if (typeof n1 == 'number' && typeof n2 == 'number') {
         return n1 * 10 + n2 * 1;
