@@ -19,4 +19,8 @@ class User {
     }
 }
 const userX = new User('saif', 'saif@gmail.com', 'asd21635465as$', 12);
+// can access the private properties
 console.log(userX.password);
+// can set private properties
+userX.addingGem = 8;
+console.log(userX.password, userX);
