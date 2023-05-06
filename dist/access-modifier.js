@@ -1,7 +1,7 @@
 "use strict";
-const clg = (param) => {
-    console.log(param);
-};
+// const clg=(param:any):void=>{
+//     console.log(param);
+// }
 class BankAccount {
     constructor(id, name, _balance, _branch) {
         this.id = id;
